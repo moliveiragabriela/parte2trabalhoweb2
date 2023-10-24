@@ -1,0 +1,49 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 20px;
+  }
+  
+  h1 {
+    text-align: center;
+  }
+  
+  #opcoesReserva {
+    text-align: center;
+    margin-bottom: 20px;
+  }
+  
+  #formFazerReserva, #formCancelarReserva {
+    max-width: 500px;
+    margin: 0 auto;
+  }
+  
+  #formFazerReserva label, #formCancelarReserva label {
+    display: block;
+    margin-bottom: 5px;
+  }
+  
+  #formFazerReserva input, #formCancelarReserva input, #formFazerReserva select {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+    box-sizing: border-box;
+  }
+  
+  #formFazerReserva button, #formCancelarReserva button {
+    padding: 10px 20px;
+  }
+  
+  #resumoReserva {
+    margin-top: 20px;
+  }
+  
+  #resumoReserva span {
+    font-weight: bold;
+  }
+  
+  #mensagemCancelarReservaTexto {
+    text-align: center;
+    margin-top: 20px;
+    font-weight: bold;
+  }
+  

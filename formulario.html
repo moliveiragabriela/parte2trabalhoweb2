@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Formulário de Reservas</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <h1>Formulário de Reservas</h1>
+
+  <div id="opcoesReserva">
+    <button onclick="mostrarFormulario('fazerReserva')">Fazer Reserva</button>
+    <button onclick="mostrarFormulario('cancelarReserva')">Cancelar Reserva</button>
+  </div>
+
+  <div id="formFazerReserva" style="display: none;">
+    <h2>Fazer Reserva</h2>
+    <form id="fazerReservaForm">
+      <label for="nomeCompleto">Nome completo:</label>
+      <input type="text" id="nomeCompleto" required><br>
+
+      <label for="dataNascimento">Data de nascimento:</label>
+      <input type="date" id="dataNascimento" required><br>
+
+      <label for="dataReserva">Data da reserva:</label>
+      <input type="date" id="dataReserva" required><br>
+
+      <label for="horarioReserva">Horário para reserva:</label>
+      <select id="horarioReserva" required>
+        <option value="18h">18h</option>
+        <option value="19h">19h</option>
+      </select><br>
+
+      <label for="numPessoas">Quantas pessoas:</label>
+      <input type="number" id="numPessoas" min="1" required><br>
+
+      <label for="telefone">Telefone:</label>
+      <input type="tel" id="telefone" required><br>
+
+      <label for="email">Email:</label>
+      <input type="email" id="email" required><br>
+
+      <button type="button" onclick="fazerReserva()">Reservar</button>
+    </form>
+
+    <div id="resumoReserva" style="display: none;">
+      <h3>Reserva realizada com sucesso!</h3>
+      <p>ID_RESERVA: <span id="idReserva"></span></p>
+      <p>Nome: <span id="reservaNomeCompleto"></span></p>
+      <p>Data da Reserva: <span id="reservaData"></span></p>
+      <p>Horário da Reserva: <span id="reservaHorario"></span></p>
+      <p>Número de Pessoas: <span id="reservaNumPessoas"></span></p>
+      <p>Telefone: <span id="reservaTelefone"></span></p>
+      <p>Email: <span id="reservaEmail"></span></p>
+    </div>
+  </div>
+
+  <div id="formCancelarReserva" style="display: none;">
+    <h2>Cancelar Reserva</h2>
+    <form id="cancelarReservaForm">
+      <label for="codigoReserva">Código da Reserva:</label>
+      <input type="text" id="codigoReserva" required><br>
+
+      <label for="dataNascimentoCancelar">Data de Nascimento:</label>
+      <input type="date" id="dataNascimentoCancelar" required><br>
+
+      <button type="button" onclick="cancelarReserva()">Cancelar Reserva</button>
+    </form>
+
+    <div id="mensagemCancelarReserva" style="display: none;">
+      <h3 id="mensagemCancelarReservaTexto"></h3>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
